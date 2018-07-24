@@ -1,0 +1,23 @@
+{
+  "name": "blog",
+  "version": "0.0.1",
+  "description": "Junwoo's personal blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JunuSinclair/blog.git"
+  },
+  "keywords": [
+    "junwoo",
+    "blog"
+  ],
+  "author": "Jununymous",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JunuSinclair/blog/issues"
+  },
+  "homepage": "https://github.com/JunuSinclair/blog#readme"
+}
