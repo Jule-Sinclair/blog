@@ -17,7 +17,7 @@ const express = require('express');
 const PORT = process.env.PORT
 const app = express();
 
-apt.get("/", (req, res) => {
+app.get("/", (req, res) => {
   res.send({ hello: 'world' });
 });
 
