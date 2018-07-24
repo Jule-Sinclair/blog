@@ -2,8 +2,9 @@
   "name": "blog",
   "version": "0.0.1",
   "description": "Junwoo's personal blog",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +20,12 @@
   "bugs": {
     "url": "https://github.com/JunuSinclair/blog/issues"
   },
-  "homepage": "https://github.com/JunuSinclair/blog#readme"
+  "homepage": "https://github.com/JunuSinclair/blog#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "engines": {
+    "node": "v8.11.3",
+    "npm": "5.6.0"
+  }
 }
