@@ -1,2 +1,2 @@
 # blog
-repo of personal blog
+Personal Blog of Jununymous.

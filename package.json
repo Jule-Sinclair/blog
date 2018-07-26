@@ -2,9 +2,9 @@
   "name": "blog",
   "version": "0.0.1",
   "description": "Junwoo's personal blog",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,7 +22,10 @@
   },
   "homepage": "https://github.com/JunuSinclair/blog#readme",
   "dependencies": {
-    "express": "^4.16.3"
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6"
   },
   "engines": {
     "node": "v8.11.3",
