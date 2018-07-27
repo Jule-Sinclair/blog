@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "heroku-postbuild": "webpack -p",
-    "dev:watch": "webpack --config webpack.config.dev.js -w"
+    "heroku-postbuild": "postcss src/css/*.css -d dist/css & webpack --config webpack.config.js",
+    "dev:watch": "postcss src/css/*.css -d dist/css -w & webpack --config webpack.config.dev.js -w"
   },
   "repository": {
     "type": "git",
