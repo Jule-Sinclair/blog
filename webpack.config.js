@@ -1,9 +1,6 @@
 const webpack = require('webpack');
-const {
-  ProgressPlugin,
-  NamedChunksPlugin,
-  NoEmitOnErrorsPlugin
-} = webpack;
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const { ProgressPlugin, NamedChunksPlugin } = webpack;
 const { resolve, join } = require('path');
 
 const baseDir =  process.cwd();
@@ -20,6 +17,40 @@ module.exports = {
     path: outputDir,
     // publicPath: '//static.ridibooks.com/unlimited/dist/',
     filename: '[name].min.js',
+  },
+  optimization: {
+    namedModules: true,
+    namedChunks: true,
+    noEmitOnErrors: true,
+    runtimeChunk: {
+      name: 'manifest'
+    },
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          name: 'vendors',
+          chunks: 'all',
+          test (chunk) {
+            return chunk.context && chunk.context.includes('node_modules');
+          }
+        }
+      }
+    },
+    minimizer: [
+      new UglifyJsPlugin({
+        uglifyOptions: {
+          cache: true,
+          parallel: true,
+          sourceMap: true,
+          compress: {
+            warnings: false,
+            drop_console: false,
+          },
+          comments: false,
+        },
+      })
+    ]
+
   },
   module: {
     rules: [
@@ -45,7 +76,6 @@ module.exports = {
   },
   plugins: [
     new ProgressPlugin(),
-    new NoEmitOnErrorsPlugin(),
     new NamedChunksPlugin(chunk => {
       if (chunk.name) return chunk.name;
       return chunk.mapModules((m) => (
