@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "heroku-postbuild": "webpack -p",
+    "dev:watch": "webpack --config webpack.config.dev.js -w"
   },
   "repository": {
     "type": "git",
@@ -21,11 +22,49 @@
     "url": "https://github.com/JunuSinclair/blog/issues"
   },
   "homepage": "https://github.com/JunuSinclair/blog#readme",
+  "devDependencies": {
+    "@types/classnames": "^2.2.3",
+    "@types/react": "^16.0.34",
+    "@types/react-dom": "^16.0.3",
+    "@types/react-helmet": "^5.0.6",
+    "@types/react-lazyload": "^2.3.0",
+    "@types/react-loadable": "^5.4.0",
+    "@types/react-redux": "^5.0.14",
+    "@types/react-router": "^4.0.20",
+    "@types/react-router-dom": "^4.2.3",
+    "@types/react-router-redux": "^5.0.11",
+    "@types/redux": "^3.6.3",
+    "postcss": "^7.0.1",
+    "postcss-cli": "^6.0.0",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-import": "^11.1.0",
+    "postcss-nesting": "^6.0.0",
+    "stylelint": "^9.4.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-order": "^0.8.1",
+    "tslint": "^5.11.0",
+    "tslint-loader": "^3.6.0",
+    "awesome-typescript-loader": "^5.2.0",
+    "typescript": "^2.9.2",
+    "webpack": "^4.16.2",
+    "webpack-cli": "^3.1.0"
+  },
   "dependencies": {
     "body-parser": "^1.18.3",
+    "classnames": "^2.2.5",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
-    "express-session": "^1.15.6"
+    "express-session": "^1.15.6",
+    "path": "^0.12.7",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-helmet": "^5.2.0",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-router-redux": "^4.0.8",
+    "redux": "^4.0.0",
+    "redux-saga": "^0.16.0"
   },
   "engines": {
     "node": "v8.11.3",
