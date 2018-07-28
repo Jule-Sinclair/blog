@@ -11,7 +11,7 @@ const outputDir = join(baseDir, 'dist');
 module.exports = {
   mode: 'production',
   entry: {
-    app: 'src/app.ts',
+    app: 'src/app/index.tsx',
   },
   output: {
     path: outputDir,

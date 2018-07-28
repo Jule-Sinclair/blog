@@ -10,7 +10,7 @@ const outputDir = join(baseDir, 'dist');
 module.exports = {
   mode: 'development',
   entry: {
-    app: 'src/app.ts',
+    app: 'src/app/index.tsx',
   },
   output: {
     path: outputDir,
