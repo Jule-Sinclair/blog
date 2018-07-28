@@ -16,7 +16,7 @@ const server = app.listen(PORT, function(){
 });
 
 
-app.use(express.static('public'));
+app.use(express.static(`${__dirname}/dist`));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
