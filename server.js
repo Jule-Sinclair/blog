@@ -11,8 +11,10 @@ app.set('views', `${__dirname}/views`);
 app.set('view engine', 'ejs');
 app.engine('html', ejs.renderFile);
 
-const server = app.listen(PORT, function(){
+const server = PORT ? app.listen(PORT, function(){
   console.log(`Express server has started on port ${PORT}`);
+}) : app.listen(8080, function(){
+  console.log(`Express server has started on port ${8080}`);
 });
 
 
