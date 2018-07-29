@@ -5,6 +5,6 @@ import { StoreType } from 'app/types';
 
 export const App: React.SFC<{ store: StoreType }> = ({ store }) => (
   <Provider store={store}>
-
+    test
   </Provider>
 );
